@@ -24,7 +24,7 @@
                 <legend>Pain</legend>
                 <div class="fieldset--fields">
                   <label for="bread-flour">Farine</label>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="bread-flour"
                       type="number"
@@ -32,7 +32,7 @@
                     /><span>g</span>
                   </div>
                   <label for="bread-hydration">Taux d'hydratation</label>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="bread-hydration"
                       type="number"
@@ -43,7 +43,7 @@
                     <label for="bread-starter-rate">Taux d'ensemencement</label>
                     <small>(30% en hiver, 15% en été)</small>
                   </div>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="bread-starter-rate"
                       type="number"
@@ -51,7 +51,7 @@
                     /><span>%</span>
                   </div>
                   <label for="bread-salt-rate">Sel</label>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="bread-salt-rate"
                       type="number"
@@ -64,7 +64,7 @@
                 <legend>Levain tout point</legend>
                 <div class="fieldset--fields">
                   <label for="yeast3-hydration">Taux d'hydratation</label>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="yeast3-hydration"
                       type="number"
@@ -72,7 +72,7 @@
                     /><span>%</span>
                   </div>
                   <label for="yeast3-sowing">Taux d'ensemencement</label>
-                  <div>
+                  <div class="nowrap">
                     <input id="yeast3-sowing" type="number" value="10" /><span
                       >%</span
                     >
@@ -83,7 +83,7 @@
                 <legend>Levain jeune</legend>
                 <div class="fieldset--fields">
                   <label for="yeast2-hydration">Taux d'hydratation</label>
-                  <div>
+                  <div class="nowrap">
                     <input
                       id="yeast2-hydration"
                       type="number"
@@ -91,7 +91,7 @@
                     /><span>%</span>
                   </div>
                   <label for="yeast2-sowing">Taux d'ensemencement</label>
-                  <div>
+                  <div class="nowrap">
                     <input id="yeast2-sowing" type="number" value="100" /><span
                       >%</span
                     >
@@ -112,21 +112,25 @@
               <div>Poids final du pain : ~{{ Math.round(flour * 1.7) }}g</div>
             </section>
             <section>
-              <h3>Levain jeune</h3>
+              <h3>1. Le levain jeune</h3>
               <div>
-                Levain chef: {{ Math.round(result.levainJeune.yeast) }}g
+                {{ Math.round(result.levainJeune.yeast) }}g de levain chef
               </div>
-              <div>Farine: {{ Math.round(result.levainJeune.flour) }}g</div>
-              <div>Eau: {{ Math.round(result.levainJeune.water) }}g</div>
+              <div>
+                {{ Math.round(result.levainJeune.flour) }}g de farine
+              </div>
+              <div>{{ Math.round(result.levainJeune.water) }}g d'eau</div>
               <div>Levée: 2-4h</div>
             </section>
             <section>
-              <h3>Levain tout point</h3>
+              <h3>2. Le levain tout point</h3>
               <div>
-                Levain jeune: {{ Math.round(result.levainToutPoint.yeast) }}g
+                {{ Math.round(result.levainToutPoint.yeast) }}g de levain jeune
               </div>
-              <div>Farine: {{ Math.round(result.levainToutPoint.flour) }}g</div>
-              <div>Eau: {{ Math.round(result.levainToutPoint.water) }}g</div>
+              <div>
+                {{ Math.round(result.levainToutPoint.flour) }}g de farine
+              </div>
+              <div>{{ Math.round(result.levainToutPoint.water) }}g d'eau</div>
               <div>Levée: 12-15h</div>
               <div>
                 Total: {{ Math.round(result.levainToutPoint.total) -50 }}g pour
@@ -134,13 +138,13 @@
               </div>
             </section>
             <section>
-              <h3>Pain</h3>
-              <div>Farine: {{ Math.round(flour) }}g</div>
+              <h3>3. Le pain</h3>
+              <div>{{ Math.round(flour) }}g de farine</div>
               <div>
-                Levain tout point: {{ Math.round(result.bread.yeast) - 50 }}g
+                {{ Math.round(result.bread.yeast) - 50 }}g de levain tout point
               </div>
-              <div>Eau: {{ Math.round(result.bread.water) }}g</div>
-              <div>Sel: {{ Math.round(result.bread.salt) }}g</div>
+              <div>{{ Math.round(result.bread.water) }}g d'eau</div>
+              <div>{{ Math.round(result.bread.salt) }}g de sel</div>
               <div>Première levée: 3h (donner un tour toutes les 45min)</div>
               <div>Façonnage + seconde levée: 1h.</div>
             </section>

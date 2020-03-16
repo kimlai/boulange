@@ -111,7 +111,7 @@ body {
 
 h1 {
   font-size: var(--s5);
-  line-height: 1;
+  line-height: 0.9;
   font-weight: 900;
   text-align: center;
   margin-bottom: var(--s2);
@@ -129,6 +129,9 @@ input {
   width: 8ch;
   margin-right: 0.5rem;
   padding: var(--s-6) var(--s-4);
+}
+.nowrap {
+  white-space: nowrap;
 }
 
 small {
