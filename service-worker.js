@@ -3,7 +3,7 @@
 // file mostly stolen from https://github.com/chriscoyier/Simple-Offline-Site/blob/82b765bf9944844bb50d91364616a52a8b97d464/js/service-worker.js
 
 // this version number should be changed everytime one of the cached assets is changed
-const VERSION = "v4";
+const VERSION = "v5";
 
 self.addEventListener("install", event => {
   event.waitUntil(
